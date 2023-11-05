@@ -2,10 +2,270 @@
 body {
     margin: 0;
     font-size: 16px;
+   
 }
+    
+    
 
 .container {
+   
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+    display: grid;
+   grid-column: span 3;
+   grid-template-columns: auto auto auto;
+   
+   grid-template-areas: "header nav";
+ 
+}
+/* Formatting the header */
+header{
+    display: grid;
+    background-color: white; 
+    font-family: apple-system, 
+   BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+   Arial, "Noto Sans", sans-serif;
+   
+   
+   
+}
+h1{   
+    
+    text-align: left;
+    font-size: 18px;
+   
+}
+/* Navigation Panel  */
+nav{
+     grid-area: nav;
+     text-align: right;
+     margin-top: 0%;
+     padding-top: 0%;
+     
+    
+    
+    
+}
+/* Links in the navigation panel */
+li{
+   
+    color:#6b7280;
+    display:inline-block;
+    list-style-type:none ;
+    font-size: 18px;
+    padding-right: 2%;
+   
+}
+
+/* Makes the links change color when hovered over */
+li:hover{
+ color:#5A67D8;
+}
+
+/* Main content of the webpage */
+main{
+    display:grid;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+
+/* Formatting the overview section. */
+.overview-hero{
+    
+    display:grid;
+
+    background-color: #E2E8F0;
+}
+.overview-hero-text{
+   
+    font-family: apple-system, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif;
+    
+    text-align: right;
+    grid-row:1;
+    padding:50px;
+    font-size: 18px;
+
+}
+.overview-hero-image{
+    text-align: right;
+    width: 150px;
+    grid-row: 1;
+    padding:50px;
+}
+.overview-hero-image img{
+    width:220px;
+    height:220px;
+}
+
+/* Formatting the learn about section. */
+.learn-about{
+    display:grid;
+    grid-row:2;
+   
+}
+.learn-about h2{
+    color:#48BB78;
+    font-family: apple-system, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif;
+    font-size: 24px;
+    grid-column: span 3;
+    margin-left:10%;
+}
+/* Placing each card in a column */
+.cards{
+    display: grid;
+    grid-row:2;
+    grid-template-columns: auto auto auto;
+    padding:20px;
+    column-gap:10px;  
+}
+.card {
+    grid-row: 2;
+    border-style: solid;
+    border-color: #E2E8F0;
+    border-radius: 5px;
+    box-shadow: 2px 12px  #E2E8F0 ;
+    width: 50%;
+    
+    padding:20%;
+    font-family: apple-system, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif;
+}
+.card h3{
+    color:#48BB78;
+    font-size: 21px;
+    
+}
+
+.card img{
+    width: 120%;
+    height:30%;
+
+}
+
+/* Formatting the covid-19 testing section. */
+.testing{
+    display:grid;
+    grid-row:3;
+    background-color: #4A5568;
+    padding:3%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+.testing h2{
+    font-size:18px;
+    font-family: apple-system, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif;
+    color:white;
+}
+.testing p{
+    font-family: apple-system, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif;
+    font-size: 18px;
+    color:white;
+}
+.cta{
+    padding-top: 50%;
+    width:129%;
+    padding-right: 6%;
+}
+.testing a {
+     background-color:#48BB78;
+     padding:5%;
+     border-radius: 5px;
+     float:center;
+     
+     
+}
+.btn {
+    color:white;
+    width:150%;
+    font-size:18px;
+    
+}
+
+/* Formatting the stories section. */
+.stories .container{
+    display:flex;
+    grid-row: 4;
+    flex-direction:column;
+    /* width:100%; */
+    font-family:apple-system, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif; 
+    
+}
+.stories h2{
+    color:#5A67D8;
+    padding-top:5%;
+    padding-left:11%
+}
+.stories article {
+    display:block;
+    text-align: right;
+    padding:2%;
+    font-size: 18px;
+}
+.stories img{
+    width:100px;
+    height:100px;
+    float:left;
+    border-radius: 50%;
+    padding:5%;
+}
+.article-body{
+    justify-content: right;
+    text-align: justify;
+   
+}
+
+/* Formatting the newsletter section */
+.newsletter{
+    grid-row:5;
+    background-color: #48BB78;
+    color:white;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    font-family:apple-system, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif; 
+    font-size: 18px;
+}
+.newsletter .container{
+    display:block;
+    width:100%;
+
+}
+form{
+    display:flex;
+    flex-direction: row;
+    width:50%;
+    padding-left:30%;
+    padding-bottom: 10%;
+}
+button{
+    background-color:#5A67D8;
+    font-size: 18px;
+
+}
+
+/* Formatting the footer section. */
+footer{
+    background-color: #4A5568;
+    color:white;
+}
+footer p{
+    padding-left:20%;
+    font-family:apple-system, 
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif; 
+    font-size: 18px;
 }
